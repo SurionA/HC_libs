@@ -4,6 +4,9 @@
 #ifdef ESP32
 #include "heltec.h"
 
+float hc_temperature = 0;
+float hc_humidity = 0;
+
 void HC_DHTSensorsClass::displayTempHumidityOnOled(){
     // delay(getMinimumSamplingPeriod());
 
@@ -37,8 +40,6 @@ void HC_DHTSensorsClass::displayTempHumidity(){
 };
 #endif
 
-float hc_temperature = 0;
-float hc_humidity = 0;
 
 void HC_DHTSensorsClass::updateHcValues() {
     hc_temperature = getTemperature();
